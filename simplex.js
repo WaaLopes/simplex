@@ -1,9 +1,9 @@
 const simplex = {
   matrix: [
-    [2, 1, 1, 0, 0, 18],
-    [2, 3, 0, 1, 0, 42],
-    [3, 1, 0, 0, 1, 24],
-    [-3, -2, 0, 0, 0, 0]
+    [2, 1, 1, 0, 0, 16],
+    [1, 2, 0, 1, 0, 11],
+    [1, 3, 0, 0, 1, 15],
+    [-30, -50, 0, 0, 0, 0]
   ],
   simplexObjective: "max",
 
@@ -40,7 +40,7 @@ const simplex = {
       this.matrix[lineIndex].push();
       smallest =
         [...this.matrix[smallest]].pop() / this.matrix[smallest][baseEntry] <
-        [...this.matrix[lineIndex]].pop() / this.matrix[lineIndex][baseEntry]
+          [...this.matrix[lineIndex]].pop() / this.matrix[lineIndex][baseEntry]
           ? smallest
           : lineIndex;
     }

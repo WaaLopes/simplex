@@ -1,0 +1,13 @@
+.step.-off {
+	display: none;
+}
+
+table {
+	margin-top: 20px;
+	border: 1px solid #333;
+}
+
+td {
+	padding: 5px 10px;
+	border: 1px solid #333;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabalho Prático - PO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simplex - Pesquisa Operacional</h1>
+
+    <div class="step step1 -on">
+        <div>
+            <label for="simplexObjective">Objetivo do Simplex</label>
+            <select name="simplexObjective" id="simplexObjective">
+                <option value="max">Maximização</option>
+                <option value="min">Minimização</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="decisionVars">Número de variáveis de decisão:</label>
+            <input type="number" name="decisionVars" id="decisionVars">
+        </div>
+
+        <div>
+            <label for="restrictions">Número de restrições:</label>
+            <input type="number" name="restrictions" id="restrictions">
+        </div>
+
+        <button class="nextStep" data-next="step2">Avançar</button>
+    </div>
+
+    <div class="step step2 -off">
+        <span>Função objetivo:</span>
+        <input type="number" class="objectiveFunction">X1 + <input type="number" class="objectiveFunction">X2
+
+        <div class="step2-restrictions"></div>
+
+        <button class="nextStep" data-next="solve">Avançar</button>
+    </div>
+
+    <div class="solvedSimplex"></div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
